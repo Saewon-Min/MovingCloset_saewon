@@ -71,27 +71,44 @@
 </script>
 <style>
 	#img{
-		width:auto; height: 40%;
-	}
-	#btnBuy, #basket, #wish{
-		padding: 5px;
-		border-radius: 10px;
-		background-color: black;
-		color: white;
-		font-size: 1.5em;
+		"max-width:100%; height:auto;"
 
 	}
-	#btnReview{
-		padding: 3px;
-		border-radius: 10px;
+	#btnBuy, #basket, #wish{
+		padding: 5%;
+		border-radius: 50px;
 		background-color: black;
 		color: white;
+		font-size: 1.2em;
+		font-weight: bold;
+		border: solid 1px;
+	}
+	#btnBuy:hover {background-color: gray;}
+	#basket:hover {background-color: lightgray;}
+	#wish:hover {background-color: lightgray;}
+	
+	#basket, #wish{
+		background-color: white;
+		color: black;
+		border-color: gray;
+
+	}
+	
+	
+	#btnReview{
+		padding: 10px;
+		border-radius: 8px;
+		background-color: black;
+		color: white;
+		width:auto;
 
 	}
 	#brandName ,#prodName ,#shoes ,#prodCount ,#price {
 		font-size: 1.8em;
 
 	}
+	
+
 </style>
 
 <!-- 
@@ -112,48 +129,72 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container" style="margin-top: 5%;">
+	<div class="container-fluid" style="margin-top: 5%;">
 		<div class="row" style="height: 500px;">
 			<div class="col-8 d-flex justify-content-center" >
-				<img src="../resources/images/feet-1840619_1920.jpg" alt="상품이미지" id='img' class="rounded"/>
+				<img src="../resources/images/feet-1840619_640.jpg" alt="상품이미지" id='img' class="rounded"/>
 			</div>
-			<div class="col-4" style="padding-left: 5%; padding-top: 7%;">
+			<div class="col-4" style="padding-left: 0%; padding-top: 1%;">
+				
+
 				
 				<span id="brandName">NIKE</span><br>
-				<span id="prodName">상품명</span>&nbsp;&nbsp;&nbsp;
-				<span id="price">100,000</span>
-				<div>
-					<span id="shoes">사이즈</span>&nbsp;&nbsp;&nbsp;
-					<select name="size" id="sizeNum" style="border: solid lightgray 1px; border-radius: 5px; padding: 3px;">
-						<option value="220">220</option>
-						<option value="230">230</option>
-						<option value="240">240</option>
-						<option value="250">250</option>
-						<option value="260">260</option>
-						<option value="270">270</option>
-						<option value="280">280</option>
-					</select>
+				<br>
+
+				<div class="row">
+					<div class="col-6">
+						<span id="prodName">상품명</span>&nbsp;&nbsp;&nbsp;
+					</div>
+					<div class="col-6">
+						<span id="price">100,000</span>
+					</div>
 				</div>
+				<br>
+
+				<div class="row">
+					<div class="col-6">
+						<span id="shoes">사이즈</span>&nbsp;&nbsp;&nbsp;
+					</div>
+					<div class="col-6" >
+						<select name="size" id="sizeNum" style="border: solid lightgray 1px; border-radius: 5px; padding: 3px;font-size: 25px;">
+							<option value="220">220</option>
+							<option value="230">230</option>
+							<option value="240">240</option>
+							<option value="250">250</option>
+							<option value="260">260</option>
+							<option value="270">270</option>
+							<option value="280">280</option>
+						</select>
+					</div>
+				</div>
+
+				<br>
+				<div class="row">
+					<div class="col-6">
+						<span id="prodCount">수량</span>&nbsp;&nbsp;&nbsp;
+					</div>
+					<div class="col-6">
+						<button class="btn" id="minus" onclick="plusminus(this.id);"><i class="fa fa-minus"></i></button>
+						<input type="text" id="quantity" value="1" style="border: none; width: 30px; background-color: none;">
+						<button class="btn" id="plus" onclick="plusminus(this.id);"><i class="fa fa-plus"></i></button>
+					</div>
+				</div>
+
+				<br>
 				<div>
-					<span id="prodCount">수량</span>&nbsp;&nbsp;&nbsp;
-					<button class="btn" id="minus" onclick="plusminus(this.id);"><i class="fa fa-minus"></i></button>
-					<input type="text" id="quantity" value="1" style="border: none; width: 30px; background-color: none;">
-					<button class="btn" id="plus" onclick="plusminus(this.id);"><i class="fa fa-plus"></i></button>
+					<button id="btnBuy" style="width: 90%;">구매하기</button>
 				</div><br>
 				<div>
-					<button id="btnBuy" style="width: 85%;">구매하기</button>
-				</div><br>
-				<div>
-					<span><button style="width: 50%;" id="basket">장바구니</button></span>
-					<span><button style="width: 35%;" id="wish">위시 <i class="fa fa-heart" style="color: red;"></i></button></span>
+					<span><button style="width: 45%;" id="basket">장바구니</button></span>
+					<span><button style="width: 45%;" id="wish">위시리스트 <i class="fa fa-heart" style="color: red;"></i></button></span>
 				</div>
 			</div>
 			
 		</div>
-	</div>
+	</div><br /><br /><br />
 	<hr>
 
-	<div class="container">
+	<div class="container-fluid">
 		<h2>평균 평점 : <span>99.99</span></h2>
 		<div class="row" style="padding: 2%;">
 			<div class="d-flex mr-auto">
@@ -194,7 +235,7 @@
 				<td>2021-07-31</td>
 				<td>
 				<a href="">
-					<img src="../resources/images/feet-1840619_1920.jpg" alt="상품이미지"
+					<img src="../resources/images/feet-1840619_640.jpg" alt="상품이미지"
 					style="width: 100px; height: auto;"/>
 				</a>
 				</td>
@@ -212,7 +253,7 @@
 				<td>2021-07-31</td>
 				<td>
 				<a href="">
-					<img src="../resources/images/feet-1840619_1920.jpg" alt="상품이미지"
+					<img src="../resources/images/feet-1840619_640.jpg" alt="상품이미지"
 					style="width: 100px; height: auto;"/>
 				</a>
 				</td>
@@ -230,7 +271,7 @@
 				<td>2021-07-31</td>
 				<td>
 				<a href="">
-					<img src="../resources/images/feet-1840619_1920.jpg" alt="상품이미지"
+					<img src="../resources/images/feet-1840619_640.jpg" alt="상품이미지"
 					style="width: 100px; height: auto;"/>
 				</a>
 				</td>
@@ -248,7 +289,7 @@
 				<td>2021-07-31</td>
 				<td>
 				<a href="">
-					<img src="../resources/images/feet-1840619_1920.jpg" alt="상품이미지"
+					<img src="../resources/images/feet-1840619_640.jpg" alt="상품이미지"
 					style="width: 100px; height: auto;"/>
 				</a>
 				</td>
@@ -266,7 +307,7 @@
 				<td>2021-07-31</td>
 				<td>
 				<a href="">
-					<img src="../resources/images/feet-1840619_1920.jpg" alt="상품이미지"
+					<img src="../resources/images/feet-1840619_640.jpg" alt="상품이미지"
 					style="width: 100px; height: auto;"/>
 				</a>
 				</td>
