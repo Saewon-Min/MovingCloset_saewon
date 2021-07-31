@@ -40,7 +40,7 @@ public class HomeController {
 	@RequestMapping(value="/project/test.do", method=RequestMethod.GET)
 	public String boardList(Locale locale, Model model) {
 		
-		return "board/list";
+		return "body/store_detail";
 	}
 	
 	

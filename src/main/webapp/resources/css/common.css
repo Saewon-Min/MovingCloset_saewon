@@ -6,7 +6,7 @@
 .wrap{
 	width: 100%;
 }
-.Header, .Footer{
+.Header{
 	width: 100%;float: left;text-align:center;	
 }
 .Header{
@@ -23,6 +23,7 @@
 }
 .Footer{
 	background-color: #000000;
-	font-size:2em;height: 100px;line-height:100px; color: white;
+	height: 100%; color: white;
+	width: 100%;text-align:center;	
 	
 }

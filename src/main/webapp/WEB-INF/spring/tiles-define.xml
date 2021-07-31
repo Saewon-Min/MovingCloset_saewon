@@ -22,7 +22,7 @@
 <tiles-definitions>
 	<definition name="layout-tiles" template="/WEB-INF/views/tiles/tiles_layout.jsp">
 		<put-attribute name="top"  value="/WEB-INF/views/tiles/topNavBar.jsp"/>
-		<put-attribute name="left" value="/WEB-INF/views/tiles/leftTemplate.jsp"/>
+		<!-- <put-attribute name="left" value="/WEB-INF/views/tiles/leftTemplate.jsp"/> -->
 		<put-attribute name="body" value=""/>
 		<put-attribute name="bottom" value="/WEB-INF/views/tiles/bottomTemplate.jsp"/>
 	</definition>
