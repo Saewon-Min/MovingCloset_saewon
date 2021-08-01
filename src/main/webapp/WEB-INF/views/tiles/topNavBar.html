@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    *{margin: 0;padding:0;}
+html {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #333;
+}
+body {
+    background-color: #fff;
+}
+
+button{
+    outline: none;
+}
+
+a{text-decoration: none;color: #333;}
+ul{list-style: none;}
+
+
+#nav{width:"100%"}
+#main_nav{background-color: #000000; height: 60px; line-height: 60px;}
+#main_nav ul{overflow: hidden;width: 960px;margin: 0 auto; }
+#main_nav ul li {width: 192px; float: left;}
+#main_nav ul li a {color:#fff;font-size: 18px;font-weight: bold;}
+
+#sub{width: 100%; position: absolute;top: 60px;left: 0;right: 0;
+    background-color: rgba(244, 243, 66,0.7); border-bottom: 1px solid #ccc;}
+#sub_menu{overflow: hidden;width: 960px;margin: 0 auto;padding-top: 15px; padding-bottom: 15px;}
+#sub_menu .menu {}
+#sub_menu .menu li{}
+#sub_menu .menu li a{}
+</style>
+<script>
+
+    $(function(){
+        $('sub').hide();
+        $('main_nav').hover(function(){
+            $(this).parent().find('sub').slideDown();
+            $(this).parent().hover(function(){
+
+            },function(){
+                $(this).parent().find('sub').slideUp(900);
+            })
+        });
+    });
+
+
+
+
+
+    // $(document).ready(function() {
+
+    //     /*
+    //     hover() : 선택한 요소에 마우스를 올렸을 때, 내렸을 때의 효과를 
+    //         부여하기 위해 사용한다.
+    //     */
+    //     $(".menu").hover(
+    //         //인자 1 : 마우스 오버 시 실행할 무기명 함수
+    //         function() {
+    //             $('.dept01').slideDown(300)
+    //             //css()사용 시 JSON을 통해 속성을 부여한다.
+    //         }, 
+    //         //인자 2 : 마우스를 아웃했을 때 실행할 무기명 함수
+    //         function() {
+    //             $('.dept01').slideUp(300)
+    //         });
+    // });
+       
+
+
+</script>
+</head>
+<body>
+
+    <div id="nav">
+        <div id="main_nav">
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+            </ul>
+        </div>
+        <div id="sub">
+            <div id="subMenu">
+                <ul class="menu">
+                    <li>샌드위치</li>
+                    <li>랩 • 기타</li>
+                    <li>찹샐러드</li>
+                    <li>스마일 썹</li>
+                    <li>단체메뉴</li>
+                </ul>
+                <ul class="menu">
+                    <li>샌드위치</li>
+                    <li>랩 • 기타</li>
+                    <li>찹샐러드</li>
+                    <li>스마일 썹</li>
+                    <li>단체메뉴</li>
+                </ul>
+                <ul class="menu">
+                    <li>샌드위치</li>
+                    <li>랩 • 기타</li>
+                    <li>찹샐러드</li>
+                    <li>스마일 썹</li>
+                    <li>단체메뉴</li>
+                </ul>
+                <ul class="menu">
+                    <li>샌드위치</li>
+                    <li>랩 • 기타</li>
+                    <li>찹샐러드</li>
+                    <li>스마일 썹</li>
+                    <li>단체메뉴</li>
+                </ul>
+                <ul class="menu">
+                    <li>샌드위치</li>
+                    <li>랩 • 기타</li>
+                    <li>찹샐러드</li>
+                    <li>스마일 썹</li>
+                    <li>단체메뉴</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script>
@@ -81,6 +82,7 @@
 		font-size: 1.2em;
 		font-weight: bold;
 		border: solid 1px;
+		outline: 0;
 	}
 	#btnBuy:hover {background-color: gray;}
 	#basket:hover {background-color: lightgray;}
@@ -95,11 +97,12 @@
 	
 	
 	#btnReview{
-		padding: 10px;
-		border-radius: 8px;
+		padding: 15px 30px;
+		border-radius: 50px;
 		background-color: black;
 		color: white;
 		width:auto;
+		outline: 0;
 
 	}
 	#brandName ,#prodName ,#shoes ,#prodCount ,#price {
@@ -163,6 +166,7 @@
 	  height: 150px;
 	}
 	
+	/* 애니메이션 효과 있는 부분 주석처리함 */
 	/* Add Animation */
 	/* .modal-content, #caption {  
 	  -webkit-animation-name: zoom;
@@ -205,6 +209,12 @@
 	  .modal-content {
 		width: 100%;
 	  }
+	}
+
+	.modaltext{
+		color: white;
+		word-spacing: 20px;
+		
 	}
 	</style>
 <!-- 
@@ -283,7 +293,7 @@
 					<button id="btnBuy" style="width: 90%;">구매하기</button>
 				</div><br>
 				<div>
-					<span><button style="width: 45%;" id="basket">장바구니</button></span>
+					<span><button style="width: 45%;" id="basket">장바구니 <i class="fas fa-shopping-cart"></i></button></span>
 					<span><button style="width: 45%;" id="wish">위시리스트 <i class="fa fa-heart" style="color: red;"></i></button></span>
 				</div>
 			</div>
@@ -293,11 +303,11 @@
 	<hr>
 
 	<div class="container">
-		<h2>평균 평점 : <span>99.99</span></h2>
-		<div class="row" style="padding: 2%;">
-			<div class="d-flex mr-auto">
-				<input type="checkbox" name="photocheck" id="photocheck" value="photocheck">
-					<label for="photocheck">포토리뷰</label>
+		<h2>평균 평점 : <span>5.0</span></h2>
+		<div class="row" style="padding: 4%;">
+			<div class="d-flex mr-auto" >
+				<input type="checkbox" name="photocheck" id="photocheck" value="photocheck" class="form-check-input" style="zoom: 1.5;">
+					<label for="photocheck" style="font-size: 24px;">포토리뷰</label>
 			</div>
 			<div class="d-flex ml-auto">
 				<button id="btnReview">리뷰 쓰기</button>
@@ -308,11 +318,11 @@
 			<thead>
 			<tr>
 				<th style="width: 15%;">평점
-				<i class="fa fa-star"></i>
-				<i class="fa fa-star"></i>
-				<i class="fa fa-star"></i>
-				<i class="fa fa-star"></i>
-				<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
 				</th>
 				<th style="width: 40%;">한줄평</th>
 				<th style="width: 20%;">작성일</th>
@@ -332,10 +342,8 @@
 				<td style="text-align: left;">신발이 예뻐요!</td>
 				<td>2021-07-31</td>
 				<td>
-				
 					<img id="myImg" src="../../../resources/images/feet-1840619_640.jpg" alt="상품이미지"
 					style="width: 100px; height: auto;"/>
-				
 				</td>
 			</tr>
 			<tr >
@@ -350,10 +358,8 @@
 				<td style="text-align: left;">신발이 예뻐요!</td>
 				<td>2021-07-31</td>
 				<td>
-				<a href="">
 					<img id="myImg" src="../../../resources/images/feet-1840619_640.jpg" alt="상품이미지"
 					style="width: 100px; height: auto;"/>
-				</a>
 				</td>
 			</tr>
 			<tr >
@@ -368,10 +374,8 @@
 				<td style="text-align: left;">신발이 예뻐요!</td>
 				<td>2021-07-31</td>
 				<td>
-				<a href="">
 					<img id="myImg" src="../../../resources/images/feet-1840619_640.jpg" alt="상품이미지"
 					style="width: 100px; height: auto;"/>
-				</a>
 				</td>
 			</tr>
 			<tr >
@@ -386,10 +390,8 @@
 				<td style="text-align: left;">신발이 예뻐요!</td>
 				<td>2021-07-31</td>
 				<td>
-				<a href="">
 					<img id="myImg" src="../../../resources/images/feet-1840619_640.jpg" alt="상품이미지"
 					style="width: 100px; height: auto;"/>
-				</a>
 				</td>
 			</tr>
 			<tr >
@@ -404,10 +406,8 @@
 				<td style="text-align: left;">신발이 예뻐요!</td>
 				<td>2021-07-31</td>
 				<td>
-				<a href="">
 					<img id="myImg" src="../../../resources/images/feet-1840619_640.jpg" alt="상품이미지"
 					style="width: 100px; height: auto;"/>
-				</a>
 				</td>
 			</tr>
 
@@ -427,7 +427,18 @@
 	<div id="myModal" class="modal">
 		<span class="close">&times;</span>
 		<img class="modal-content" id="img01"></img>
-		<div id="caption">나는 신발</div>
+		<div class="modaltext" style="text-align: center;">
+			<br>
+			<!-- 키, 몸무게, 발사이즈 -->
+			<span>키</span>
+			<span>몸무게</span>
+			<span>발사이즈</span>
+			<br><br>
+			<!-- 해시태그 부분 -->
+			<span>#정사이즈</span>
+			<span>#흰색</span>
+			<span>#예뻐요</span> 
+		</div>
 	</div>
 	 
 	<script>
@@ -436,12 +447,11 @@
 		
 		// Get the image and insert it inside the modal - use its "alt" text as a caption
 		var img = document.getElementById("myImg");
+
 		var modalImg = document.getElementById("img01");
-		var captionText = document.getElementById("caption");
 		img.onclick = function(){
 		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
+		  modalImg.src = this.src;;
 		}
 		
 		// Get the <span> element that closes the modal
