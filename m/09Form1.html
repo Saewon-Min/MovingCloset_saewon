@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09Form1.html</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:700,600">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
+</head>
+<body>
+    <h2>React에서 Form사용하기</h2>
+    <div id="mydiv1"></div>
+    <script type="text/babel">
+
+        (function(document) {
+        document.addEventListener('DOMContentLoaded', function() {
+            let nav = document.querySelector('nav');
+            let navItems = Array.from(nav.querySelectorAll('li > a'));
+            
+            navItems.forEach(function(item, index) {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                nav.className = nav.className.replace(/[0-9]/, index);
+                nav.querySelector('.selected').classList.remove('selected');
+                item.classList.add('selected');
+                nav.classList.remove('focused');
+            });
+            
+            item.addEventListener('focus', function() {
+                nav.classList.add('focused');
+            });
+            
+            item.addEventListener('blur', function() {
+                nav.classList.remove('focused');
+            });
+            });
+        });
+        })(document);f
+
+    
+    </script>
+
+</body>
+</html>

@@ -108,6 +108,14 @@
 
 	}
 	
+	span.a {
+		display: inline;
+	}
+	
+	#brandName{
+		display: inline;
+	}
+	
 
 </style>
 
@@ -129,10 +137,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container-fluid" style="margin-top: 5%;">
+	<div class="container" style="margin-top: 5%;">
 		<div class="row" style="height: 500px;">
 			<div class="col-8 d-flex justify-content-center" >
+			<span class="a">
 				<img src="../resources/images/feet-1840619_640.jpg" alt="상품이미지" id='img' class="rounded"/>
+			</span>
 			</div>
 			<div class="col-4" style="padding-left: 0%; padding-top: 1%;">
 				
@@ -194,7 +204,7 @@
 	</div><br /><br /><br />
 	<hr>
 
-	<div class="container-fluid">
+	<div class="container">
 		<h2>평균 평점 : <span>99.99</span></h2>
 		<div class="row" style="padding: 2%;">
 			<div class="d-flex mr-auto">
