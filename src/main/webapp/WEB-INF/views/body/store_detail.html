@@ -26,49 +26,19 @@
 		
 	}
 
-	/* 
-	팝업창에서 별점 매길때 쓸 함수
-	function fillstar(id){
+	$(function(){
+		$('#btnReview').click(function(){
 
-		var s1 = document.getElementById("star1");
-		var s2 = document.getElementById("star2");
-		var s3 = document.getElementById("star3");
-		var s4 = document.getElementById("star4");
-		var s5 = document.getElementById("star5");
+			var child;
+			child = window.open("reviewPage.html", "reviewhtml", "height:300, width:300");
+		});
 
-		if(id=="star1"){
-			if(s1.className=="fa fa-star-o"){
-				s1.className = "fa fa-star";
-			}else{
-				s1.className = "fa fa-star-o";
-			}
-		}else if(id=="star2"){
-			s1.className = "fa fa-star";
-			s2.className = "fa fa-star";
-		}else if(id=="star3"){
-			s1.className = "fa fa-star";
-			s2.className = "fa fa-star";
-			s3.className = "fa fa-star";
-		}else if(id=="star4"){
-			s1.className = "fa fa-star";
-			s2.className = "fa fa-star";
-			s3.className = "fa fa-star";
-			s4.className = "fa fa-star";
-		}else if(id=="star5"){
-			s1.className = "fa fa-star";
-			s2.className = "fa fa-star";
-			s3.className = "fa fa-star";
-			s4.className = "fa fa-star";
-			s5.className = "fa fa-star";
-		}
+	});
 
 
-	} */
 
-	btnReview.onclick=function(){
-		
-		rePage = window.open("reviewPage.html","review","width=400,height=300");
-	};
+
+	
 </script>
 
 	
@@ -323,7 +293,7 @@
 					<label for="photocheck" style="font-size: 24px;">포토리뷰</label>
 			</div>
 			<div class="d-flex ml-auto">
-				<button id="btnReview">리뷰 쓰기</button>
+				<button id="btnReview" >리뷰 쓰기</button>
 			</div>
 		</div>
 
@@ -439,7 +409,7 @@
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
 		<span class="close">&times;</span>
-		<img class="modal-content" id="img01"></img>
+		<img class="modal-content" id="img01" />
 		<div class="modaltext" style="text-align: center;">
 			<br>
 			<!-- 키, 몸무게, 발사이즈 -->
